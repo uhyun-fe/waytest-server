@@ -3,9 +3,11 @@ const express = require("express");
 const parser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cors = require("cors");
 
 dotenv.config();
 const app = express();
+app.use(cors());
 
 // [ CONFIGURE mongoose ]
 

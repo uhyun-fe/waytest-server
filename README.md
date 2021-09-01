@@ -4,7 +4,7 @@
 
 ```
 npm init -y
-npm install --save express mongoose body-parser dotenv
+npm install --save express mongoose body-parser dotenv cors
 ```
 
 ## Heroku 배포
