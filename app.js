@@ -35,5 +35,5 @@ const router = require("./routes")(app, Counter);
 
 // [RUN SERVER]
 app.listen(PORT, function () {
-   console.log("Express server has started on port " + port);
+   console.log("Express server has started on port " + PORT);
 });

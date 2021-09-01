@@ -1,6 +1,6 @@
 module.exports = function (app, Counter) {
    // GET My Counter
-   app.get("/api/count", function (req, res) {
+   app.get("/", function (req, res) {
       Counter.findOne({ _id: 0 }, function (err, counter) {
          if (err) return res.status(500).json({ error: err });
          if (!counter) return res.status(404).json({ error: "counter not found" });
@@ -9,8 +9,8 @@ module.exports = function (app, Counter) {
    });
 
    // UPDATE THE Counter
-   app.put("/api/count/update", function (req, res) {
-      Counter.findById(0, function (err, counter) {
+   app.put("/count", function (req, res) {
+      Counter.findOne({ _id: 0 }, function (err, counter) {
          if (err) return res.status(500).json({ error: "database failure" });
          if (!counter) return res.status(404).json({ error: "counter not found" });
 
