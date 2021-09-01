@@ -1,11 +1,11 @@
 {
    "name": "waytest-server",
    "version": "1.0.0",
-   "description": "node.js version 16.5.0",
+   "description": "",
    "main": "index.js",
-   "type": "module",
    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon app"
    },
    "repository": {
       "type": "git",
@@ -19,9 +19,9 @@
    },
    "homepage": "https://github.com/uhyun-fe/waytest-server#readme",
    "dependencies": {
-      "cors": "^2.8.5",
+      "body-parser": "^1.19.0",
       "dotenv": "^10.0.0",
       "express": "^4.17.1",
-      "mongodb": "^4.1.0"
+      "mongoose": "^6.0.3"
    }
 }
