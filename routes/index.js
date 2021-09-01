@@ -17,7 +17,7 @@ module.exports = function (app, Counter) {
          counter.visit = counter.visit + 1;
 
          counter.save(function (err) {
-            if (err) res.status(500).json({ error: "failed to update" });
+            if (err) return res.status(500).json({ error: "failed to update" });
             res.json({ data: 200, message: "counter updated" });
          });
       });
