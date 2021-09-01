@@ -34,6 +34,6 @@ const port = process.env.PORT || 8080;
 const router = require("./routes")(app, Counter);
 
 // [RUN SERVER]
-const server = app.listen(port, function () {
+app.listen(port, function () {
    console.log("Express server has started on port " + port);
 });
