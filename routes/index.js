@@ -14,10 +14,10 @@ module.exports = function (app, Counter) {
          if (err) return res.status(500).json({ error: "database failure" });
          if (!counter) return res.status(404).json({ error: "counter not found" });
 
-         counter.visit = counter.visit + 1;
+         counter.visit = 100;
 
          counter.save(function (err) {
-            if (err) return res.status(500).json({ error: "failed to update" });
+            if (err !== null) return res.status(500).json({ error: "failed to update" });
             res.json({ data: 200, message: "counter updated" });
          });
       });
