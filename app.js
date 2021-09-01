@@ -14,7 +14,7 @@ const db = mongoose.connection;
 db.on("error", console.error);
 db.once("open", function () {
    // CONNECTED TO MONGODB SERVER
-   console.log("Connected to mongod server");
+   console.log("Connected to mongodb server");
 });
 
 mongoose.connect(process.env.MONGODB_CONNECT_URI);
