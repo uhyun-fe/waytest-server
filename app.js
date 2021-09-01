@@ -19,7 +19,7 @@ db.once("open", function () {
    console.log("Connected to mongodb server");
 });
 
-mongoose.connect(process.env.MONGODB_CONNECT_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 const Counter = require("./models/counter");
 
@@ -27,13 +27,10 @@ const Counter = require("./models/counter");
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
-// [CONFIGURE SERVER PORT]
-const PORT = process.env.PORT || 8080;
-
 // [CONFIGURE ROUTER]
 const router = require("./routes")(app, Counter);
 
 // [RUN SERVER]
-app.listen(PORT, function () {
-   console.log("Express server has started on port " + PORT);
+app.listen(process.env.PORT || 8000, function () {
+   console.log("Express server has started!!");
 });
