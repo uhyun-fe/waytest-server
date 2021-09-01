@@ -28,12 +28,12 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
 
 // [CONFIGURE SERVER PORT]
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // [CONFIGURE ROUTER]
 const router = require("./routes")(app, Counter);
 
 // [RUN SERVER]
-app.listen(port, function () {
+app.listen(PORT, function () {
    console.log("Express server has started on port " + port);
 });

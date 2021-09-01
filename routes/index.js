@@ -9,7 +9,7 @@ module.exports = function (app, Counter) {
    });
 
    // UPDATE THE Counter
-   app.put("/api/count", function (req, res) {
+   app.put("/api/count/update", function (req, res) {
       Counter.findById(0, function (err, counter) {
          if (err) return res.status(500).json({ error: "database failure" });
          if (!counter) return res.status(404).json({ error: "counter not found" });
