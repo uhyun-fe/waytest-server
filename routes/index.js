@@ -18,7 +18,7 @@ module.exports = function (app, Counter) {
 
          counter.save(function (err) {
             if (err) res.status(500).json({ error: "failed to update" });
-            res.json({ message: "counter updated" });
+            res.json({ data: 200, message: "counter updated" });
          });
       });
    });
